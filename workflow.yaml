@@ -1,0 +1,10 @@
+main:
+  steps:
+    - callFunction:
+        call: http.get
+        args:
+          url: https://us-central1-cgpterraform-123.cloudfunctions.net/function-t
+          auth:
+            type: OIDC
+    - logResult:
+        return: "Cloud Function exécutée avec succès"    
